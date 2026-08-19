@@ -13,6 +13,10 @@ SHELL_DIR="$(
 # Shell
 ################################################################################
 
+# shellcheck source=shell/system.sh
+# shellcheck disable=SC1091
+source "${SHELL_DIR}/system.sh"
+
 # shellcheck source=shell/git.sh
 # shellcheck disable=SC1091
 source "${SHELL_DIR}/git.sh"
@@ -20,3 +24,7 @@ source "${SHELL_DIR}/git.sh"
 # shellcheck source=shell/tmux.sh
 # shellcheck disable=SC1091
 source "${SHELL_DIR}/tmux.sh"
+
+# shellcheck source=shell/vim.sh
+# shellcheck disable=SC1091
+source "${SHELL_DIR}/vim.sh"
