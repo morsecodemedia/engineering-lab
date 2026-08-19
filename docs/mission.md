@@ -1,1 +1,1 @@
-Engineering Lab provides tools, workflows, and automation for software engineers built on top of Workstation.Engineering Lab provides tools, workflows, and automation for software engineers built on top of Workstation.
+Engineering Lab provides tools, workflows, and automation for software engineers built on top of Workstation. Engineering Lab provides tools, workflows, and automation for software engineers built on top of Workstation.
