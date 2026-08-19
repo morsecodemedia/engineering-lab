@@ -16,3 +16,11 @@ gitfetchall() {
 gsum() {
   git_workflow_summary
 }
+
+# Eventually evolve to engineer git history
+flog() {
+  git_workflow_history "$@"
+}
+ghist() {
+  git_workflow_history "$@"
+}

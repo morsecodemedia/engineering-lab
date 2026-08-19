@@ -12,7 +12,7 @@ git_workflow_summary() {
     local query
 
     if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-        printf "Engineering Lab: not inside a Git repository.\n" >&2
+        engineering_error "Engineering Lab: not inside a Git repository." >&2
         return 1
     fi
 
@@ -21,7 +21,7 @@ git_workflow_summary() {
     )"
 
     if [[ -z "${diff}" ]]; then
-        printf "Engineering Lab: no staged changes.\n" >&2
+        engineering_error "Engineering Lab: no staged changes."
         printf "Stage changes before generating a commit summary.\n" >&2
         return 1
     fi
@@ -41,7 +41,7 @@ EOF
     )
 
     if ! command -v sgpt >/dev/null 2>&1; then
-        printf "Engineering Lab: no AI provider is available.\n" >&2
+        engineering_error "Engineering Lab: no AI provider is available."
         printf "Install or configure an AI provider before using gsum.\n" >&2
         return 1
     fi
@@ -52,9 +52,8 @@ EOF
     ${diff}"
     )"; then
 
-        printf "Engineering Lab: commit summary generation failed.\n" >&2
+        engineering_error "Engineering Lab: commit summary generation failed."
         printf "Verify your AI provider is configured correctly.\n" >&2
-
         return 1
 
     fi
