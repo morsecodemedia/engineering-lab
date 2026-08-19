@@ -16,3 +16,7 @@ SHELL_DIR="$(
 # shellcheck source=shell/git.sh
 # shellcheck disable=SC1091
 source "${SHELL_DIR}/git.sh"
+
+# shellcheck source=shell/tmux.sh
+# shellcheck disable=SC1091
+source "${SHELL_DIR}/tmux.sh"
