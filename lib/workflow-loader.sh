@@ -9,6 +9,8 @@ LIB_DIR="$(
     pwd
 )"
 
+RUNTIME_DIR="${LIB_DIR}/runtime"
+
 ################################################################################
 # System Workflows
 ################################################################################
@@ -23,7 +25,7 @@ source "${LIB_DIR}/workflows/system/process.sh"
 
 # shellcheck source=error.sh
 # shellcheck disable=SC1091
-source "${LIB_DIR}/error.sh"
+source "${RUNTIME_DIR}/error.sh"
 
 ################################################################################
 # Git Workflows
