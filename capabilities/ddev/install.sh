@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Repository
-################################################################################
-
-LIB_DIR="$(
-    cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 || exit
-    pwd
-)"
-
-RUNTIME_DIR="${LIB_DIR}/runtime"
+set -euo pipefail
 
 ################################################################################
-# Runtime
+# Install
 ################################################################################
 
-# shellcheck source=runtime/docker.sh
-# shellcheck disable=SC1091
-source "${RUNTIME_DIR}/docker.sh"
+brew install ddev/ddev/ddev
 
-# shellcheck source=runtime/ddev.sh
-# shellcheck disable=SC1091
-source "${RUNTIME_DIR}/ddev.sh"
+################################################################################
+# Certificates
+################################################################################
+
+if command -v mkcert >/dev/null 2>&1; then
+
+    mkcert -install
+
+fi
