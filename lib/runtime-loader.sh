@@ -30,3 +30,11 @@ source "${RUNTIME_DIR}/ddev.sh"
 # shellcheck source=runtime/ai.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/ai.sh"
+
+################################################################################
+# Git
+################################################################################
+
+# shellcheck source=runtime/git.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/git.sh"
