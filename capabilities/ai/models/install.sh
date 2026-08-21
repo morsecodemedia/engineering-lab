@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 ################################################################################
 # Repository
 ################################################################################
@@ -15,25 +17,41 @@ ROOT="$(
 )"
 
 ################################################################################
-# Runtime
+# MCU
 ################################################################################
 
-# shellcheck source=../../runtime-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/runtime-loader.sh"
+MCU_INSTALLATION="${HOME}/.config/mcu/installation.env"
+
+[[ -r "${MCU_INSTALLATION}" ]] || {
+    printf "%s\n" "MCU is not installed." >&2
+    exit 1
+}
+
+# shellcheck disable=SC1090
+source "${MCU_INSTALLATION}"
+
+# shellcheck disable=SC1090
+source "${PRODUCT_ROOT}/lib/sdk/loader.sh"
 
 ################################################################################
-# Workflows
+# AI Configuration
 ################################################################################
 
-# shellcheck source=../../workflow-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/workflow-loader.sh"
+AI_ROOT="${HOME}/.config/engineering-lab/ai"
+
+# shellcheck disable=SC1090
+source "${AI_ROOT}/default.env"
+
+# shellcheck disable=SC1090
+source "${AI_ROOT}/models/${AI_DEFAULT_MODEL}.env"
+
+mkdir -p "${AI_MODEL_STORE}"
 
 ################################################################################
-# Shell
+# Installation
 ################################################################################
 
-# shellcheck source=../../shell-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/shell-loader.sh"
+hf download \
+    "${AI_MODEL_REPOSITORY}" \
+    "${AI_MODEL_FILENAME}" \
+    --local-dir "${AI_MODEL_STORE}"

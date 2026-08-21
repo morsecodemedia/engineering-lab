@@ -1,3 +1,5 @@
+# Roadmap
+
 ## Project Orchestration
 
 Goal
@@ -16,3 +18,19 @@ Examples
 
 WordPress will serve as the initial reference
 implementation.
+
+## AI Policy Engine
+
+Goal:
+    Dynamically select the optimal provider and model based on:
+
+        • Machine capabilities
+        • Current resource utilization
+        • Project requirements
+        • Lab requirements
+        • Model capabilities
+        • User preferences
+
+Status:
+    Vision complete.
+    Deferred until multiple providers/models exist.
