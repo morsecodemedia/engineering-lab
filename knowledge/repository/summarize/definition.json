@@ -1,0 +1,20 @@
+{
+  "schema": "task-definition/v1",
+
+  "id": "repository.summarize",
+
+  "name": "Repository Summary",
+
+  "description": "Summarize the current engineering repository.",
+
+  "domain": "repository",
+
+  "intent": "summarize",
+
+  "pipeline": {
+    "runtime": "engineering.context",
+    "context_renderer": "engineering.context.markdown",
+    "prompt_renderer": "engineering.prompt.repository.summarize",
+    "interpreter": "engineering.interpreter.markdown"
+  }
+}

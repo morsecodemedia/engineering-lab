@@ -70,3 +70,27 @@ source "${RUNTIME_DIR}/changes.sh"
 # shellcheck source=runtime/context.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/context.sh"
+
+################################################################################
+# Task
+################################################################################
+
+# shellcheck source=runtime/task.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/task.sh"
+
+################################################################################
+# Task Definition
+################################################################################
+
+# shellcheck source=runtime/task-definition.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/task-definition.sh"
+
+################################################################################
+# Runtime Resolver
+################################################################################
+
+# shellcheck source=runtime/resolver.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/resolver.sh"
