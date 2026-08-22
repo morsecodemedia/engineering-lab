@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+################################################################################
+# Renderer
+#
+# Context
+################################################################################
 
-jq -r '
+render_context_markdown() {
+
+    jq -r '
 
 "# Engineering Context",
 
@@ -51,3 +57,5 @@ end),
 (.changes.changes.files[]? | "- \(.)")
 
 '
+
+}
