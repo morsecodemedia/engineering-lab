@@ -29,8 +29,8 @@ runtime_task_execute() {
         jq -r '.pipeline.context_renderer' <<< "${definition}"
     )"
 
-    prompt_renderer="$(
-        jq -r '.pipeline.prompt_renderer' <<< "${definition}"
+    prompt="$(
+        jq -r '.pipeline.prompt' <<< "${definition}"
     )"
 
     runtime="$(
@@ -43,7 +43,7 @@ runtime_task_execute() {
 
     runtime_resolve "${runtime}" \
     | runtime_context_renderer "${context_renderer}" \
-    | runtime_prompt_renderer "${prompt_renderer}" \
+    | render_prompt "${prompt}" \
     | runtime_ai_infer
 
 }

@@ -10,34 +10,25 @@ RENDERER_DIR="$(
 )"
 
 ################################################################################
-# Context Prompt
+# Context Renderers
 ################################################################################
 
-# shellcheck source=renderers/prompt-context.sh
+# shellcheck source=renderers/context/markdown.sh
 # shellcheck disable=SC1091
-source "${RENDERER_DIR}/renderers/prompt-context.sh"
+source "${RENDERER_DIR}/renderers/context/markdown.sh"
 
 ################################################################################
-# Context
+# Prompt Renderer
 ################################################################################
 
-# shellcheck source=renderers/context.sh
+# shellcheck source=renderers/prompts.sh
 # shellcheck disable=SC1091
-source "${RENDERER_DIR}/renderers/context.sh"
+source "${RENDERER_DIR}/renderers/prompts.sh"
 
 ################################################################################
-# Runtime
+# Renderer Runtime
 ################################################################################
 
 # shellcheck source=renderers/runtime.sh
 # shellcheck disable=SC1091
 source "${RENDERER_DIR}/renderers/runtime.sh"
-
-
-################################################################################
-# Prompt Runtime
-################################################################################
-
-# shellcheck source=renderers/prompt-runtime.sh
-# shellcheck disable=SC1091
-source "${RENDERER_DIR}/renderers/prompt-runtime.sh"

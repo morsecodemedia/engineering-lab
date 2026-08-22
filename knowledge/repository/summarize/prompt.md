@@ -11,5 +11,3 @@ Produce:
 5. Recommended next actions
 
 ---
-
-{{CONTEXT}}
