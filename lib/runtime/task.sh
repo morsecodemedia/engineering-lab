@@ -23,6 +23,7 @@ runtime_task_execute() {
     local context_renderer
     local prompt_renderer
     local runtime
+    local interpreter
 
     context_renderer="$(
         jq -r '.pipeline.context_renderer' <<< "${definition}"
@@ -36,29 +37,13 @@ runtime_task_execute() {
         jq -r '.pipeline.runtime' <<< "${definition}"
     )"
 
+    interpreter="$(
+        jq -r '.pipeline.interpreter' <<< "${definition}"
+    )"
+
     runtime_resolve "${runtime}" \
     | runtime_context_renderer "${context_renderer}" \
-    | runtime_prompt_renderer "${prompt_renderer}"
+    | runtime_prompt_renderer "${prompt_renderer}" \
+    | runtime_ai_infer
 
-    return
-
-    case "$task" in
-
-        repository.summarize)
-
-            runtime_context_state \
-            | render_context_markdown \
-            | render_context_prompt \
-            | runtime_ai_infer
-
-            ;;
-
-        *)
-
-            printf "Unknown task: %s\n" "$task" >&2
-            return 1
-
-            ;;
-
-    esac
 }
