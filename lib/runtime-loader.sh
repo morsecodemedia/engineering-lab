@@ -46,3 +46,19 @@ source "${RUNTIME_DIR}/project.sh"
 # shellcheck source=runtime/git.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/git.sh"
+
+################################################################################
+# Changes
+################################################################################
+
+# shellcheck source=runtime/changes.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/changes.sh"
+
+################################################################################
+# Context
+################################################################################
+
+# shellcheck source=runtime/context.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/context.sh"
