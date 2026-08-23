@@ -26,14 +26,14 @@ render_prompt() {
         | tr '.' '/'
     )"
 
-    local prompt
+    local instructions
 
-    prompt="${ROOT}/knowledge/${task_path}/prompt.md"
+    instructions="${ROOT}/knowledge/${task_path}/instructions.md"
 
-    if [[ ! -f "${prompt}" ]]; then
+    if [[ ! -f "${instructions}" ]]; then
 
         printf "%s\n" \
-            "Prompt not found: ${task}" >&2
+            "Instructions not found: ${task}" >&2
 
         return 1
 
@@ -50,12 +50,35 @@ render_prompt() {
     )"
 
     ############################################################################
-    # Prompt Composition
+    # Knowledge Package
     ############################################################################
 
-    cat "${prompt}"
+    local task_dir
 
-    printf "\n\n"
+    task_dir="${ROOT}/knowledge/${task_path}"
+
+    for document in \
+        instructions.md \
+        background.md \
+        assumptions.md \
+        principles.md \
+        calibration.md \
+        expectations.md
+    do
+
+        if [[ -f "${task_dir}/${document}" ]]; then
+
+            cat "${task_dir}/${document}"
+
+            printf "\n\n"
+
+        fi
+
+    done
+
+    ############################################################################
+    # Runtime Context
+    ############################################################################
 
     printf "%s\n" "${context}"
 
