@@ -17,35 +17,17 @@ ROOT="$(
 )"
 
 ################################################################################
-# Runtime
+# Platform
 ################################################################################
 
-# shellcheck source=../lib/runtime-loader.sh
+# shellcheck source=../lib/platform-loader.sh
 # shellcheck disable=SC1091
-source "${ROOT}/lib/runtime-loader.sh"
-
-################################################################################
-# Renderers
-################################################################################
-
-# shellcheck source=../lib/renderers-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/renderers-loader.sh"
-
-################################################################################
-# Composers
-################################################################################
-
-# shellcheck source=../lib/composers-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/composers-loader.sh"
+source "${ROOT}/lib/platform-loader.sh"
 
 ################################################################################
 # CLI
 ################################################################################
 
-# shellcheck source=../lib/cli/dispatch.sh
-# shellcheck disable=SC1091
 source "${ROOT}/lib/cli/dispatch.sh"
 
 ################################################################################

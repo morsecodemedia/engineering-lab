@@ -1,21 +1,21 @@
 {
   "schema": "task-definition/v1",
 
-  "id": "repository.review",
+  "id": "technology.recommend",
 
-  "name": "Repository Review",
+  "name": "Technology Recommendation",
 
   "description": "Review the current engineering activity within the repository.",
 
-  "domain": "repository",
+  "domain": "technology",
 
-  "intent": "review",
+  "intent": "recommend",
 
   "pipeline": {
-    "runtime": "engineering.context",
-    "input": "engineering.context",
+    "runtime": "conversation",
+    "input": "engineering.question",
     "context_renderer": "engineering.context.markdown",
-    "prompt": "repository.review",
+    "prompt": "technology.recommend",
     "interpreter": "engineering.interpreter.markdown"
   }
 }

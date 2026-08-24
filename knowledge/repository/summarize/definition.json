@@ -13,6 +13,7 @@
 
   "pipeline": {
     "runtime": "engineering.context",
+    "input": "engineering.context",
     "context_renderer": "engineering.context.markdown",
     "prompt": "repository.summarize",
     "interpreter": "engineering.interpreter.markdown"

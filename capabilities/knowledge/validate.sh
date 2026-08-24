@@ -17,20 +17,12 @@ ROOT="$(
 )"
 
 ################################################################################
-# Runtime
+# Platform
 ################################################################################
 
-# shellcheck source=../../lib/runtime-loader.sh
+# shellcheck source=../../lib/platform-loader.sh
 # shellcheck disable=SC1091
-source "${ROOT}/lib/runtime-loader.sh"
-
-################################################################################
-# Renderers
-################################################################################
-
-# shellcheck source=../../lib/renderers-loader.sh
-# shellcheck disable=SC1091
-source "${ROOT}/lib/renderers-loader.sh"
+source "${ROOT}/lib/platform-loader.sh"
 
 ################################################################################
 # Execute

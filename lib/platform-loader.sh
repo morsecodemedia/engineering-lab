@@ -1,44 +1,42 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 ################################################################################
 # Repository
 ################################################################################
 
-SCRIPT_DIR="$(
+BOOTSTRAP_DIR="$(
     cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 || exit
     pwd
 )"
 
-ROOT="$(
-    cd "${SCRIPT_DIR}/../.." >/dev/null 2>&1 || exit
-    pwd
-)"
-
 ################################################################################
-# Platform
+# Runtime
 ################################################################################
 
-# shellcheck source=../../lib/platform-loader.sh
+# shellcheck source=runtime-loader.sh
 # shellcheck disable=SC1091
-source "${ROOT}/lib/platform-loader.sh"
+source "${BOOTSTRAP_DIR}/runtime-loader.sh"
 
 ################################################################################
-# Validation
+# Renderers
 ################################################################################
 
-if (($# != 1)); then
-
-    printf "%s\n" \
-        "Usage: engineer task <task-id>" >&2
-
-    exit 1
-
-fi
+# shellcheck source=renderers-loader.sh
+# shellcheck disable=SC1091
+source "${BOOTSTRAP_DIR}/renderers-loader.sh"
 
 ################################################################################
-# Execute
+# Evidence
 ################################################################################
 
-runtime_task_execute "$1"
+# shellcheck source=evidence-loader.sh
+# shellcheck disable=SC1091
+source "${BOOTSTRAP_DIR}/evidence-loader.sh"
+
+################################################################################
+# Composers
+################################################################################
+
+# shellcheck source=composers-loader.sh
+# shellcheck disable=SC1091
+source "${BOOTSTRAP_DIR}/composers-loader.sh"

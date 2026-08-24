@@ -1,44 +1,26 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 ################################################################################
 # Repository
 ################################################################################
 
-SCRIPT_DIR="$(
+EVIDENCE_DIR="$(
     cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 || exit
     pwd
 )"
 
-ROOT="$(
-    cd "${SCRIPT_DIR}/../.." >/dev/null 2>&1 || exit
-    pwd
-)"
-
 ################################################################################
-# Platform
+# Evidence Runtime
 ################################################################################
 
-# shellcheck source=../../lib/platform-loader.sh
+# shellcheck source=evidence/runtime.sh
 # shellcheck disable=SC1091
-source "${ROOT}/lib/platform-loader.sh"
+source "${EVIDENCE_DIR}/evidence/runtime.sh"
 
 ################################################################################
-# Validation
+# Evidence Providers
 ################################################################################
 
-if (($# != 1)); then
-
-    printf "%s\n" \
-        "Usage: engineer task <task-id>" >&2
-
-    exit 1
-
-fi
-
-################################################################################
-# Execute
-################################################################################
-
-runtime_task_execute "$1"
+# shellcheck source=evidence/context.sh
+# shellcheck disable=SC1091
+source "${EVIDENCE_DIR}/evidence/context.sh"
