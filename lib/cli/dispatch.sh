@@ -18,6 +18,14 @@ cli_dispatch() {
 
             ;;
 
+        knowledge)
+
+            shift
+
+            cli_knowledge "$@"
+
+            ;;
+
         *)
 
             printf "%s\n" \
@@ -49,10 +57,43 @@ cli_task() {
 
             ;;
 
+
         *)
 
             printf "%s\n" \
                 "Unknown task command: ${command}" >&2
+
+            return 1
+
+            ;;
+
+    esac
+
+}
+
+
+################################################################################
+# Knowledge
+################################################################################
+
+cli_knowledge() {
+
+    local command="${1:-}"
+
+    case "${command}" in
+
+        validate)
+
+            shift
+
+            "${ROOT}/capabilities/knowledge/validate.sh" "$@"
+
+            ;;
+
+        *)
+
+            printf "%s\n" \
+                "Unknown knowledge command: ${command}" >&2
 
             return 1
 

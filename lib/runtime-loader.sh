@@ -94,3 +94,11 @@ source "${RUNTIME_DIR}/task-definition.sh"
 # shellcheck source=runtime/resolver.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/resolver.sh"
+
+################################################################################
+# Knowledge
+################################################################################
+
+# shellcheck source=runtime/knowledge.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/knowledge.sh"
