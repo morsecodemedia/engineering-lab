@@ -25,6 +25,12 @@ evidence_resolve() {
 
             ;;
 
+        engineering.question)
+
+            evidence_question
+
+            ;;
+
         *)
 
             printf "Unknown evidence: %s\n" "$1" >&2

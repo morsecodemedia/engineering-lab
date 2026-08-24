@@ -24,3 +24,11 @@ source "${EVIDENCE_DIR}/evidence/runtime.sh"
 # shellcheck source=evidence/context.sh
 # shellcheck disable=SC1091
 source "${EVIDENCE_DIR}/evidence/context.sh"
+
+################################################################################
+# Engineering Question
+################################################################################
+
+# shellcheck source=evidence/question.sh
+# shellcheck disable=SC1091
+source "${EVIDENCE_DIR}/evidence/question.sh"

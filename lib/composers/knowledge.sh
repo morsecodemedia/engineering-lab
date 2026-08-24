@@ -40,13 +40,28 @@ compose_knowledge_package() {
     fi
 
     ############################################################################
-    # Context
+    # Evidence
     ############################################################################
 
-    local context
+    local evidence
 
-    context="$(
+    evidence="$(
         cat
+    )"
+
+    if [[ -z "${evidence}" ]]; then
+
+        printf "%s\n" \
+            "No evidence provided." >&2
+
+        return 1
+
+    fi
+
+    local content
+
+    content="$(
+        jq -r '.content' <<< "${evidence}"
     )"
 
     ############################################################################
@@ -80,6 +95,6 @@ compose_knowledge_package() {
     # Runtime Context
     ############################################################################
 
-    printf "%s\n" "${context}"
+    printf "%s\n" "${content}"
 
 }

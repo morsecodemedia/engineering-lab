@@ -41,9 +41,8 @@ runtime_task_execute() {
         jq -r '.pipeline.interpreter' <<< "${definition}"
     )"
 
-    runtime_resolve "${runtime}" \
-    | runtime_context_renderer "${context_renderer}" \
-    | compose_knowledge_package "${prompt}" \
+    evidence_resolve engineering.context \
+    | compose_knowledge_package "${task}" \
     | runtime_ai_infer
 
 }
