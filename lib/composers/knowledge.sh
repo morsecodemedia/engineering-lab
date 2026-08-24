@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# Renderer
+# Composer
 #
-# Prompt
+# Knowledge Package
 ################################################################################
 
-render_prompt() {
+compose_knowledge_package() {
 
     if (($# != 1)); then
 
         printf "%s\n" \
-            "Usage: render_prompt <task-id>" >&2
+            "Usage: compose_knowledge_package <task-id>" >&2
 
         return 1
 

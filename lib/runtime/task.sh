@@ -43,7 +43,7 @@ runtime_task_execute() {
 
     runtime_resolve "${runtime}" \
     | runtime_context_renderer "${context_renderer}" \
-    | render_prompt "${prompt}" \
+    | compose_knowledge_package "${prompt}" \
     | runtime_ai_infer
 
 }
