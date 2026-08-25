@@ -65,6 +65,14 @@ cli_task() {
 
             ;;
 
+        info)
+
+            shift
+
+            "${ROOT}/capabilities/task/info.sh" "$@"
+
+            ;;
+
         *)
 
             printf "%s\n" \
