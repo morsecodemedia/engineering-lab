@@ -118,3 +118,11 @@ source "${RUNTIME_DIR}/resolver.sh"
 # shellcheck source=runtime/knowledge.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/knowledge.sh"
+
+################################################################################
+# Knowledge Information
+################################################################################
+
+# shellcheck source=runtime/knowledge-info.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/knowledge-info.sh"

@@ -105,6 +105,14 @@ cli_knowledge() {
 
             ;;
 
+        info)
+
+            shift
+
+            "${ROOT}/capabilities/knowledge/info.sh" "$@"
+
+            ;;
+
         *)
 
             printf "%s\n" \
