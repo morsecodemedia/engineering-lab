@@ -8,6 +8,14 @@ cli_dispatch() {
 
     local command="${1:-}"
 
+    if [[ -z "${command}" ]]; then
+
+        cli_home
+
+        return
+
+    fi
+
     case "${command}" in
 
         task)
@@ -123,5 +131,43 @@ cli_knowledge() {
             ;;
 
     esac
+
+}
+
+################################################################################
+# Home
+################################################################################
+
+cli_home() {
+
+    printf "\n"
+
+    printf "Engineering Lab\n"
+    printf "────────────────────────────────────────\n\n"
+
+    printf "Knowledge-Driven Engineering Platform\n\n"
+
+    printf "Engineering Capabilities\n\n"
+
+    printf "    Discover available engineering capabilities.\n\n"
+
+    printf "        engineer task list\n\n"
+
+    printf "Knowledge Packages\n\n"
+
+    printf "    Inspect and validate engineering knowledge.\n\n"
+
+    printf "        engineer knowledge info <task>\n"
+    printf "        engineer knowledge validate <task>\n\n"
+
+    printf "Getting Started\n\n"
+
+    printf "    1. Discover available capabilities.\n"
+    printf "    2. Inspect a capability.\n"
+    printf "    3. Execute the capability.\n\n"
+
+    printf "        engineer task list\n"
+    printf "        engineer task info repository.review\n"
+    printf "        engineer task execute repository.review\n\n"
 
 }
