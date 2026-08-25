@@ -5,7 +5,7 @@
 
   "name": "Technology Recommendation",
 
-  "description": "Review the current engineering activity within the repository.",
+  "description": "Recommend engineering technologies based on requirements and constraints.",
 
   "domain": "technology",
 

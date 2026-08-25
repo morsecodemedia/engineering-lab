@@ -59,6 +59,30 @@ New engineering capabilities should primarily require authoring Knowledge Packag
 
 ---
 
+# Phase 2.5 — Engineering Planning
+
+Status
+
+📋 Planned
+
+Goal:
+
+Transform engineering understanding into executable implementation plans.
+
+Deliverables:
+
+- Repository Review
+- Implementation Planner
+- Migration Planner
+- Refactor Planner
+- Architecture Planner
+
+Success Criteria:
+
+Engineering Lab can prepare another engineer—human or machine—to execute complex engineering work with minimal ambiguity.
+
+---
+
 # Phase 3 — Knowledge Ecosystem
 
 Status

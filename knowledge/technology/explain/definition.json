@@ -1,0 +1,21 @@
+{
+  "schema": "task-definition/v1",
+
+  "id": "technology.explain",
+
+  "name": "Technology Explaination",
+
+  "description": "Explain engineering concepts and technologies.",
+
+  "domain": "technology",
+
+  "intent": "explain",
+
+  "pipeline": {
+    "runtime": "conversation",
+    "input": "engineering.question",
+    "context_renderer": "engineering.context.markdown",
+    "prompt": "technology.explain",
+    "interpreter": "engineering.interpreter.markdown"
+  }
+}

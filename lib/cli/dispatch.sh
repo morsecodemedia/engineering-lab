@@ -57,6 +57,13 @@ cli_task() {
 
             ;;
 
+        list)
+
+            shift
+
+            "${ROOT}/capabilities/task/list.sh" "$@"
+
+            ;;
 
         *)
 
