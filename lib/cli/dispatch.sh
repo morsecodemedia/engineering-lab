@@ -34,6 +34,14 @@ cli_dispatch() {
 
             ;;
 
+        version)
+
+            shift
+
+            "${ROOT}/capabilities/version.sh"
+
+            ;;
+
         *)
 
             printf "%s\n" \
