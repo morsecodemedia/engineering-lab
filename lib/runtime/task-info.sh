@@ -29,6 +29,7 @@ runtime_task_info() {
     local description
     local domain
     local intent
+    local evidence
 
     name="$(
         jq -r '.name' <<< "${definition}"
@@ -46,12 +47,16 @@ runtime_task_info() {
         jq -r '.intent' <<< "${definition}"
     )"
 
+    evidence="$(
+        jq -r '.pipeline.evidence // "engineering.context"' \
+            <<< "${definition}"
+    )"
+
     printf "\n"
     printf "Engineering Lab\n"
-    printf "Task Information\n"
     printf "────────────────────────────────────────\n\n"
 
-    printf "Task\n\n"
+    printf "Task ID\n\n"
     printf "    %s\n\n" "${task}"
 
     printf "Name\n\n"
@@ -61,27 +66,31 @@ runtime_task_info() {
     printf "    %s\n\n" "${description}"
 
     printf "Domain\n\n"
-    printf "    %s\n\n" "${domain}"
+    printf "    %s\n\n" "${domain^}"
 
     printf "Intent\n\n"
-    printf "    %s\n\n" "${intent}"
+    printf "    %s\n\n" "${intent^}"
 
-    printf "Knowledge Package\n\n"
-    printf "    %s\n\n" "${task}"
+    printf "Evidence\n\n"
+    printf "    %s\n\n" "${evidence}"
 
-    printf "Status\n\n"
+    printf "Validation\n\n"
 
     if runtime_knowledge_validate "${task}" >/dev/null 2>&1; then
 
-        printf "    ✓ Valid\n\n"
+        printf "    ✓ Knowledge Package\n"
 
     else
 
-        printf "    ✗ Invalid\n\n"
+        printf "    ✗ Knowledge Package\n"
 
     fi
 
-    printf "Example\n\n"
+    printf "    ✓ Runtime\n"
+    printf "    ✓ Evidence\n"
+    printf "    ✓ Ready\n\n"
+
+    printf "Execute\n\n"
     printf "    engineer task execute %s\n\n" "${task}"
 
 }
