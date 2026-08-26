@@ -1,36 +1,73 @@
-# Roadmap
+# Engineering Lab Product Roadmap
 
 Engineering Lab is evolving into a Knowledge-Driven Engineering Platform.
 
-The platform is organized around independent subsystems that evolve together rather than individual features.
+Rather than embedding engineering expertise into executable software, Engineering Lab captures engineering knowledge as version-controlled artifacts executed through a deterministic platform.
+
+The long-term objective is to continuously improve engineering capability by evolving knowledge rather than increasing software complexity.
+
+Knowledge should outlive implementation.
+
+> Engineering Lab should understand everything the engineer already knows before asking the engineer to explain it again.
 
 ---
 
-# Phase 1 — Platform Foundation
+# Product Maturity
+
+Engineering Lab is organized around several parallel product tracks.
+
+Each track represents an area of the platform that matures independently while contributing to the overall product.
+
+Tracks intentionally evolve in parallel rather than sequential phases.
+
+---
+
+# Foundation
 
 Status
 
-✅ Complete
+✅ Stable
 
-Major Deliverables
+Goal
+
+Provide a stable execution platform that rarely changes.
+
+The platform should become increasingly boring.
+
+New engineering capabilities should primarily require authoring knowledge rather than modifying platform software.
+
+Current Scope
 
 - Runtime
 - Runtime Providers
-- Renderer Architecture
-- Composer Architecture
+- Evidence
+- Renderers
+- Knowledge Composer
 - Knowledge Packages
 - Knowledge Validation
 - Local Inference
-- Knowledge Execution Engine
+- Product Identity
 - Public CLI
 
-Outcome
+Future Improvements
 
-Engineering behavior is now composed from version-controlled knowledge rather than hardcoded execution paths.
+- Conversation Runtime
+- Evidence v2
+- Interpreter abstraction
+- Platform bootstrap refinement
+- Structured JSON output contracts
+- Runtime simplification
+
+Success Criteria
+
+- Platform architecture remains stable.
+- Platform subsystems maintain clear ownership.
+- Engineering knowledge evolves independently of execution.
+- New capabilities require little or no platform work.
 
 ---
 
-# Phase 2 — Engineering Intelligence
+# Engineering Capabilities
 
 Status
 
@@ -38,52 +75,211 @@ Status
 
 Goal
 
-Teach Engineering Lab how experienced engineers reason.
+Teach Engineering Lab how experienced engineers think.
 
-Current Focus
+Engineering capabilities are the primary value delivered by the platform.
 
-- Repository Review
-- Technology Recommendation
-- Technology Explanation
-- Technology Comparison
-- Code Review
-- Code Summarization
-- Architecture Assessment
+Current Domains
+
+```text
+Repository
+    review
+    summarize
+    architect
+    onboard
+
+Technology
+    explain
+    compare
+    recommend
+    troubleshoot
+    brainstorm
+
+Code
+    review
+    summarize
+    explain
+    refactor
+    optimize
+
+Architecture
+    assess
+
+Planning
+    implementation
+    migration
+    execution
+
+Security
+    audit
+
+Accessibility
+    audit
+
+Documentation
+
+Writing
+```
+
+Success Criteria
+
+Every new engineering capability should primarily require authoring a Knowledge Package rather than modifying platform software.
+
+---
+
+# Engineering Workflows
+
+Status
+
+🚧 Active
+
+Goal
+
+Compose individual engineering capabilities into complete engineering workflows.
+
+Engineering Lab should become an engineering teammate rather than a collection of isolated commands.
+
+Example Workflows
+
+Repository Review
+
+```text
+Repository Review
+        ↓
+Implementation Plan
+        ↓
+Coding Agent
+        ↓
+Repository Review
+```
+
+Architecture Planning
+
+```text
+Architecture Assessment
+        ↓
+Migration Plan
+        ↓
+Execution Tasks
+```
+
+Technology Evaluation
+
+```text
+Technology Recommendation
+        ↓
+Implementation Plan
+        ↓
+Repository Review
+```
+
+Future Workflows
+
+- Architecture Review
+- Refactoring Workflow
 - Security Review
 - Accessibility Review
-- Planning
+- Documentation Workflow
 
 Success Criteria
 
-New engineering capabilities should primarily require authoring Knowledge Packages rather than modifying platform software.
+Engineering Lab assists throughout the complete engineering lifecycle instead of solving isolated engineering problems.
 
 ---
 
-# Phase 2.5 — Engineering Planning
+# Knowledge Authoring
+
+Status
+
+🚧 Active
+
+Goal
+
+Provide an excellent authoring experience for Engineering Knowledge.
+
+Engineering Lab should become an IDE for Engineering Knowledge.
+
+Current Commands
+
+```text
+Knowledge
+
+    info
+    validate
+```
+
+Planned Commands
+
+```text
+Knowledge
+
+    doctor
+    scaffold
+    lint
+    metrics
+```
+
+Future Improvements
+
+- Knowledge templates
+- Package scaffolding
+- Knowledge quality metrics
+- Behavioral regression testing
+- Package dependency visualization
+
+Success Criteria
+
+Authoring new engineering capabilities becomes a guided workflow rather than a manual process.
+
+---
+
+# Flagship Capability
 
 Status
 
 📋 Planned
 
-Goal:
+## Planning.Implementation
 
-Transform engineering understanding into executable implementation plans.
+Purpose
 
-Deliverables:
+Transform engineering understanding into executable implementation artifacts suitable for another engineer or coding agent.
+
+Inputs
 
 - Repository Review
-- Implementation Planner
-- Migration Planner
-- Refactor Planner
-- Architecture Planner
+- Engineering Goals
+- User Constraints
+- Additional Engineering Context
 
-Success Criteria:
+Outputs
 
-Engineering Lab can prepare another engineer—human or machine—to execute complex engineering work with minimal ambiguity.
+```text
+PLAN.md
+
+TASKS.md
+
+RISKS.md
+
+QUESTIONS.md
+```
+
+Consumers
+
+- Codex
+- Qwen Coder
+- Claude Code
+- Human Engineers
+
+Long-Term Goal
+
+Engineering Lab should prepare another engineer to execute complex engineering work without requiring additional architectural interpretation.
+
+This capability represents the primary differentiator of Engineering Lab.
 
 ---
 
-# Phase 3 — Knowledge Ecosystem
+# Adaptive Intelligence
 
 Status
 
@@ -91,72 +287,78 @@ Status
 
 Goal
 
-Provide tooling for authoring, validating, and maintaining engineering knowledge.
+Continuously improve engineering reasoning while keeping platform complexity low.
 
-Potential Deliverables
-
-- Knowledge Linting
-- Knowledge Doctor
-- Knowledge Formatting
-- Behavioral Regression Testing
-- Knowledge Package Templates
-- Knowledge Scaffolding
-- Knowledge Metrics
-
-Success Criteria
-
-Engineering knowledge should become a first-class, version-controlled engineering asset.
-
----
-
-# Phase 4 — Engineering Orchestration
-
-Status
-
-📋 Planned
-
-Goal
-
-Allow Engineering Lab to coordinate multiple engineering tasks into repeatable workflows.
-
-Potential Deliverables
-
-- Project Orchestration
-- Multi-step Engineering Plans
-- Task Pipelines
-- Workflow Composition
-- Engineering Missions
-- Project Bootstrapping
-
-Success Criteria
-
-Complex engineering activities become declarative workflows executed through reusable Knowledge Packages.
-
----
-
-# Phase 5 — Adaptive Intelligence
-
-Status
-
-📋 Planned
-
-Goal
-
-Select the most appropriate reasoning strategy automatically.
-
-Potential Deliverables
+Future Areas
 
 - AI Policy Engine
 - Provider Selection
 - Model Selection
-- Capability Routing
-- Resource Awareness
-- Cost Awareness
 - Confidence Scoring
+- Cost Awareness
+- Multi-model execution
+- Conversation Runtime
+- Evidence v2
 
 Success Criteria
 
-Engineering Lab chooses the appropriate reasoning engine without requiring user intervention.
+Engineering Lab automatically selects the most appropriate reasoning strategy based upon the engineering problem.
+
+---
+
+# Product Integration (MCU)
+
+Status
+
+📋 Planned
+
+Goal
+
+Integrate Engineering Lab into the larger MCU ecosystem.
+
+Areas
+
+- Product Identity
+- Registration
+- Discovery
+- Installation
+- Updates
+- Versioning
+
+Ownership
+
+Most Product Integration work belongs within Workstation.
+
+Engineering Lab should behave as a registered MCU product rather than implementing its own installation lifecycle.
+
+---
+
+# Ideas Parking Lot
+
+These ideas intentionally remain outside the current roadmap.
+
+They should continue being explored but should not compete with current product priorities.
+
+Potential MCU Products
+
+- Neuro Lab
+- Research Lab
+- Writing Lab
+- Image Lab
+- Strategy Lab
+- Financial Lab
+
+Platform Ideas
+
+- Engineering Memory
+- Mission
+- Knowledge Metrics
+- Reasoning Patterns
+- Conversation Runtime
+- Evidence v2
+- Engineering Missions
+
+These ideas should graduate into the roadmap only when a real engineering workflow demonstrates their value.
 
 ---
 
@@ -164,10 +366,20 @@ Engineering Lab chooses the appropriate reasoning engine without requiring user 
 
 Engineering Lab is not intended to become another AI assistant.
 
-Engineering Lab is intended to become a platform for capturing, executing, validating, and continuously improving engineering expertise.
+Engineering Lab is intended to become an Engineering Knowledge Platform.
 
-The platform should continue becoming smarter by improving engineering knowledge rather than increasing software complexity.
+The platform should capture, validate, execute, and continuously improve engineering expertise.
 
-Knowledge should outlive implementation.
+Execution should remain deterministic.
 
-Execution should remain stable while engineering expertise continues to evolve.
+Knowledge should remain version-controlled.
+
+Engineering capabilities should become increasingly reusable.
+
+The execution platform should remain stable while engineering knowledge continuously evolves.
+
+Software executes.
+
+Knowledge teaches.
+
+Engineers improve.

@@ -134,3 +134,27 @@ source "${RUNTIME_DIR}/knowledge.sh"
 # shellcheck source=runtime/knowledge-info.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/knowledge-info.sh"
+
+################################################################################
+# Session
+################################################################################
+
+# shellcheck source=runtime/session.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/session.sh"
+
+################################################################################
+# Session Context
+################################################################################
+
+# shellcheck source=runtime/session-context.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/session-context.sh"
+
+################################################################################
+# Session Inference
+################################################################################
+
+# shellcheck source=runtime/session-inference.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/session-inference.sh"

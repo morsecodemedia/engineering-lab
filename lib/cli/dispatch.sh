@@ -42,6 +42,14 @@ cli_dispatch() {
 
             ;;
 
+        start)
+
+            shift
+
+            "${ROOT}/capabilities/start.sh" "$@"
+
+            ;;    
+
         *)
 
             printf "%s\n" \
