@@ -26,13 +26,15 @@ runtime_session_context() {
     )"
 
     cat <<EOF
-Engineering Lab
+$(runtime_product_identity)
 
 ================================================================================
 Product
 ================================================================================
 
-Engineering Lab
+Name
+
+    Engineering Lab
 
 Mode
 
@@ -49,24 +51,10 @@ else
 fi)
 
 ================================================================================
-Capabilities
+Engineering Capabilities
 ================================================================================
 
-Repository
-
-    repository.review
-        Review the current engineering activity.
-
-    repository.summarize
-        Summarize the current engineering repository.
-
-Technology
-
-    technology.explain
-        Explain engineering concepts.
-
-    technology.recommend
-        Recommend engineering technologies.
+$(runtime_capability_registry)
 
 ================================================================================
 Session

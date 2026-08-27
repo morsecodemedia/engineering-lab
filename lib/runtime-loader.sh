@@ -80,6 +80,22 @@ source "${RUNTIME_DIR}/changes.sh"
 source "${RUNTIME_DIR}/context.sh"
 
 ################################################################################
+# Capability Registry
+################################################################################
+
+# shellcheck source=runtime/capabilities.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/capabilities.sh"
+
+################################################################################
+# Product Identity
+################################################################################
+
+# shellcheck source=runtime/product-identity.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/product-identity.sh"
+
+################################################################################
 # Task
 ################################################################################
 
