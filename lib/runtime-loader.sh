@@ -64,6 +64,22 @@ source "${RUNTIME_DIR}/project.sh"
 source "${RUNTIME_DIR}/git.sh"
 
 ################################################################################
+# Interactive REPL
+################################################################################
+
+# shellcheck source=runtime/repl.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/repl.sh"
+
+################################################################################
+# Conversation
+################################################################################
+
+# shellcheck source=conversation/history.sh
+# shellcheck disable=SC1091
+source "${ROOT}/lib/conversation/history.sh"
+
+################################################################################
 # Changes
 ################################################################################
 
@@ -86,6 +102,14 @@ source "${RUNTIME_DIR}/context.sh"
 # shellcheck source=runtime/capabilities.sh
 # shellcheck disable=SC1091
 source "${RUNTIME_DIR}/capabilities.sh"
+
+################################################################################
+# Capability Invocation
+################################################################################
+
+# shellcheck source=runtime/capability.sh
+# shellcheck disable=SC1091
+source "${RUNTIME_DIR}/capability.sh"
 
 ################################################################################
 # Product Identity

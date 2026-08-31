@@ -383,3 +383,28 @@ Software executes.
 Knowledge teaches.
 
 Engineers improve.
+
+## Engineering Runtime
+
+Status
+
+Planned
+
+Objective
+
+Replace one-shot inference with a persistent engineering runtime.
+
+Background
+
+The current REPL prototype demonstrated that launching a new
+`llama-cli` process for every prompt reloads the model,
+reinitializes the conversation, and prevents Engineering Lab
+from behaving as a persistent engineering teammate.
+
+Success Criteria
+
+- Persistent model lifetime
+- Persistent conversation
+- Runtime-owned session loop
+- Capability invocation during conversation
+- Foundation for MCP integration
