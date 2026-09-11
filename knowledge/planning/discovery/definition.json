@@ -1,0 +1,21 @@
+{
+  "schema": "task-definition/v1",
+
+  "id": "planning.discovery",
+
+  "name": "Planning Discovery",
+
+  "description": "Discover the engineering context required before implementation planning begins.",
+
+  "domain": "planning",
+
+  "intent": "discovery",
+
+  "pipeline": {
+    "runtime": "engineering.context",
+    "input": "engineering.context",
+    "context_renderer": "engineering.context.markdown",
+    "prompt": "planning.discovery",
+    "interpreter": "engineering.interpreter.markdown"
+  }
+}

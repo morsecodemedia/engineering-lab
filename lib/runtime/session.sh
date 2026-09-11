@@ -68,7 +68,7 @@ runtime_session_start() {
     printf "    ✓ Model Selection\n"
     printf "    ✓ Session Context\n\n"
 
-    #runtime_ai_session "${session}"
-    runtime_repl
+    runtime_ai_session "${session}"
+    #runtime_repl
 
 }

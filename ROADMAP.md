@@ -408,3 +408,28 @@ Success Criteria
 - Runtime-owned session loop
 - Capability invocation during conversation
 - Foundation for MCP integration
+
+Capability Phases
+
+Goal
+
+Allow capabilities to execute across multiple
+conversation turns.
+
+Example
+
+planning.implementation
+
+    Discovery
+
+    ↓
+
+    Planning
+
+    ↓
+
+    Complete
+
+The runtime owns capability progression.
+
+The language model does not.
