@@ -85,8 +85,12 @@ Current Domains
 Repository
     review
     summarize
-    architect
-    onboard
+    architecture
+    onboarding
+    dependencies
+    entrypoints
+    risks
+    conventions
 
 Technology
     explain
@@ -94,6 +98,8 @@ Technology
     recommend
     troubleshoot
     brainstorm
+    tradeoffs
+    compatibility
 
 Code
     review
@@ -101,29 +107,62 @@ Code
     explain
     refactor
     optimize
+    debug
+    style
+    complexity
 
 Architecture
     assess
+    patterns
+    boundaries
+    tradeoffs
+    evolution
 
 Planning
+    discovery
     implementation
     migration
     execution
+    estimation
+    prioritization
+    roadmap
 
 Security
     audit
+    threat-model
+    dependencies
 
 Accessibility
     audit
+    wcag
+    remediation
 
 Documentation
+    specification
+    adr
+    review
+    summarize
+    api
+    onboarding
 
 Writing
+    review
+    rewrite
+    feedback
+    presentation
+    mentoring
 ```
 
 Success Criteria
 
 Every new engineering capability should primarily require authoring a Knowledge Package rather than modifying platform software.
+
+Repository->Future Rename->Systems
+
+Reason:
+* Capabilities should describe engineering disciplines.
+* Evidence adapters should describe where evidence originates.
+* Repository represents one evidence source rather than the engineering discipline itself.
 
 ---
 
